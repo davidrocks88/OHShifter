@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+        <title>OHShifter</title>
+        <link rel="stylesheet" type="text/css" href="OHstyle.css">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( "#date" ).datepicker();
+  });
+  </script>
+</head>
+<body>
+        <script type="text/javascript">
+                function submitForm() {
+                        var x = document.forms["OHform"];
+                        var name = x.name.value;
+                        var email = x.email.value;
+                        var date = x.date.value;
+                        var shift = x.time.value;
+                        console.log(name);
+                        console.log(email);
+                        console.log(date);
+                        console.log(shift);
+
+                }
+
+        </script>
+        <div id='newOH'> 
+                <h4 class='header'> Post New Office Hour Shift Change Request </h4>
+        <form name="OHform">
+                Name: <br><input id = 'name'></input><br>
+                Email: <br><input id = 'email'></input><br>
+                Date: <br><input id = 'date'></input><br>
+                Time: <br><input id = 'time'></input><br>
+                <br><br>
+                <input type="button" value="Submit" onclick="submitForm()">
+        </form>
+        </div>
+</body>
+</html>
